@@ -136,14 +136,18 @@ var SlideShow = (function() {
     _fnScale($ul.children().eq(opts._index+1), 1);
   }
 
-  var SlideShowFunc = function(element) {
+  var SlideShowFunc = function(config) {
 
   }
 
-  SlideShowFunc.prototype.init = function(element) {
-    $ul = $(element);
+  SlideShowFunc.prototype.init = function(config) {
+    $ul = $(config.element);
     _fnGetSlideDistance();
     _bind($ul);
+    if(!!config.index) {
+      opts._index = config.index;
+      _fnSlide(opts._index-2, 0);
+    }
     return this;
   }
 
@@ -152,7 +156,12 @@ var SlideShow = (function() {
 
 
 (function(){
-  new SlideShow().init('#slide-ul');
+  //element:ul id或者class
+  //index 初始显示位置
+  new SlideShow().init({
+    element: '#slide-ul',
+    index: 2
+  });
 
   $('.refresh').on('click', function(){
     location.reload();
