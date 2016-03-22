@@ -1,6 +1,6 @@
 #Demo
 
-一些demo记录
+一些demo，随便写写、记录
 
 ##Demo List
 
@@ -40,8 +40,17 @@ WeUI Loading Demo
 
 基于jQuery/Zepto,焦点处放大，其他部分缩小。可以商品新闻等展示，内容可以图片文字等。
 
-暂时是个简陋原型，功能性和兼容性还需要不断完善。
+暂时是个简陋原型，只支持移动端，功能性和兼容性还需要不断完善。
 
 后续可以写成无依赖插件。
 
 ![SlideShow](./img/slideShow.gif)
+
+###slideText
+简单文字无缝滚动实现
+
+* 基于CSS3动画实现无缝文字滚动demo
+* 提供一种实现思路
+* 也可以按slideShow布局思路来布局
+
+![slideText](./img/slideText.gif)
